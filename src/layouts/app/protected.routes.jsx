@@ -31,7 +31,7 @@ const ProtectedRoutes = (props) => {
           // Certifique-se de que o token esteja definido antes de fazer a solicitação
           if (!token) return;
 
-          const response = await axios.get(`http://10.1.0.187:3003/api/auth/usuarios/perfil`, {
+          const response = await axios.get(`http://177.200.96.132:5477/api/auth/usuarios/perfil`, {
             headers: {
               Authorization: `Bearer ${token}`,
               'Content-Type': 'application/json',
