@@ -7,7 +7,7 @@ const tokenInStorage = localStorage.getItem('token');
 
 
 const axiosApi = axios.create({
-  baseURL: `http://10.1.0.187:3003/api`,
+  baseURL: `http://177.200.96.132:5477/api`,
   headers: {
     Authorization: `Bearer ${tokenInStorage}`,
     'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const useApiLogin = () => {
   //   setError(null);
   //   setLoading(true);
   //   try {
-  //     const response = await axios.post(`http://localhost:3003/api/auth/login`, payload, {
+  //     const response = await axios.post(`http://177.200.96.132:5477/api/auth/login`, payload, {
   //       headers: {
   //         'Content-Type': 'application/json',
   //       },
@@ -52,7 +52,7 @@ const useApiLogin = () => {
     setError(null);
     setLoading(true);
     try {
-      const response = await axios.post(`http://10.1.0.187:3003/api/auth/login`, payload, {
+      const response = await axios.post(`http://177.200.96.132:5477/api/auth/login`, payload, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -93,7 +93,7 @@ const useApiRequestGet = (path, payload) => {
     (async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://10.1.0.187:3003/api${path}`, {
+        const response = await axios.get(`http://177.200.96.132:5477/api${path}`, {
           data: payload,
           headers: configHeaders(),
         });
@@ -124,7 +124,7 @@ const useApiRequestSubmit = (method = 'post' | 'delete' | 'put', path) => {
       setLoading(true);
       const response = await axios({
         method,
-        url: `http://10.1.0.187:3003/api${path}`,
+        url: `http://177.200.96.132:5477/api${path}`,
         data: payload,
         headers: configHeaders(),
       });
