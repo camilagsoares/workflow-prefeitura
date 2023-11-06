@@ -71,11 +71,11 @@ const useApiLogin = () => {
         throw new Error('Resposta da API não contém dados válidos');
       }
     } catch (error) {
-      console.error('Erro durante o login:', error);
+      // console.error('Erro durante o login:', error);
   
-      toast('Ocorreu um erro durante o login', {
-        type: 'error',
-      });
+      // toast('Ocorreu um erro durante o login', {
+      //   type: 'error',
+      // });
       setError(error.message);
     } finally {
       setLoading(false);
